@@ -1,0 +1,1067 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		099A9BCD4A86F6F7613D2D05E46E6980 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8F46AD905037C946B350C55815F23 /* Settings.swift */; };
+		0D6D01EE1B483F3E818736E5228FF44E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B0591CCE1F3A290C8A6E6B8FECC940 /* Logger.swift */; };
+		0F95891690FF1D257BFB9A5AD4A69C81 /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6214B193EA4C8B3C3D3BA7842A1BD42 /* Venues.swift */; };
+		19316A452242E675A3740E8A16E42160 /* HCSStarRatingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E3BDD6470882AF3B47994E3D74C1F4 /* HCSStarRatingView-dummy.m */; };
+		271C6219D10FE4C12FFEF2588F4C9B2D /* Pods-CheersTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBC039730A7DF30C63DEA85A5D05C15 /* Pods-CheersTests-dummy.m */; };
+		3234F7A1F21389EFF9C7FBBCE8E26A6E /* NativeTouchAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77721CE23AB31A4B19F0CD993664AA /* NativeTouchAuthorizer.swift */; };
+		33B77061A150D3F763BD436C902A45E9 /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB64B1D6844C8B35A3FD15C896355AE /* AuthorizationViewController.xib */; };
+		43E478274F8973958371EB17803D5597 /* VenueGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA24AA0548E71617A6EA4866F4A194E /* VenueGroups.swift */; };
+		4A6168B7C081970ED5D7B077D2615A1F /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFDE4532A36D8248A27AB8516666458 /* Lists.swift */; };
+		50EC02DBB5D685DF0BFB9ADB60369018 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4B821292E24E265EEF4FDAA9A14E31 /* Session.swift */; };
+		55F03CF4CE81D12B8BB2BAAB5B3FA0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8300F47EEB39E49255907D5DFC5B2A48 /* Foundation.framework */; };
+		576F347CBF9603D3F72104A4D6DEFC0C /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEE304EB14FBB7582C79EDE054D0A5 /* AuthorizationViewController.swift */; };
+		59AF04D57EEC58915D982F8929657695 /* Pods-Cheers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46EB55655AB70415C78288C2EE4067 /* Pods-Cheers-dummy.m */; };
+		63E2C811248D7CEE68038BC31138F9BD /* OauthErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDBD715F8AD15E9994F66F6F6C0082 /* OauthErrors.swift */; };
+		651B3D956E0F12BB48248D974DD36E80 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78ACF0F64F74E29F0C53D59E6FF0C4 /* Task.swift */; };
+		663BA2FD0F86597BDD169E03024CCC71 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DA090537515A5CFAD5A54E7EC2568 /* Result.swift */; };
+		69CF0C9CE3C6C8B777A23762D7D8925A /* Multi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31F3B3B640C305172B34106CFCFEDCC /* Multi.swift */; };
+		6D6FAC52E2AA68EA49950EC2A4CB6764 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BA0A5DE55320075411779FDC1D9B71 /* Updates.swift */; };
+		6F6DB8BB74C1748F6DD94BD2771F3CA2 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34309026629A8F679D817654356A38B /* Photos.swift */; };
+		6F7877E7D93C66D5AD22D9AEA4DC0B5F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7219921F39E1CD4FF9E45687961DA8 /* SystemConfiguration.framework */; };
+		713E5C09F7EA6684C1F79D3F7E261313 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8300F47EEB39E49255907D5DFC5B2A48 /* Foundation.framework */; };
+		718DA9FA28BDE26C679543A6BFD5082D /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910057C1FFCE94D436E6AB5565E0785B /* DataCache.swift */; };
+		7A43933AF63D497EBE4FFEED2C6A518B /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEC8572B369A423A54820091ACB399 /* Authorization.swift */; };
+		81A4C9D138CC58776B6949CAB121A096 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C7FEBB4F3E2EB60F6E0A70EA4132D /* Configuration.swift */; };
+		8B406E939890AB5FC879F024B99878DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8300F47EEB39E49255907D5DFC5B2A48 /* Foundation.framework */; };
+		94B84AC79EFFAAED3809DC30363581BE /* TouchAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C8A426B6F505199FF858296B8CC22 /* TouchAuthorizer.swift */; };
+		98E058BFFC805D42C97146501A2F8593 /* QuadratTouch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64CD11F92F123F096B9543791094D1BE /* QuadratTouch-dummy.m */; };
+		9CCF0A1253687C9DA7D3D0DB04198628 /* Pods-CheersUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D11DBC809503F0D7D8D2A81C5CE4A5FF /* Pods-CheersUITests-dummy.m */; };
+		9E242E3D7D2DC8232DA7B907611FE046 /* HCSStarRatingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6530DFEA5D3CA8663252205687830689 /* HCSStarRatingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F652CDBE241C8EB719FA2DCFA3C3302 /* Pods-Cheers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E3FD7A43C5E8AD9C1D2E32351C27D0 /* Pods-Cheers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A11A9FEC34912B213FBC6643C49EEEE4 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A628064BEAD7621D15042B9C6AE57CD2 /* Parameters.swift */; };
+		A42EC3E50D7C4910AE56B394EA11A60E /* PageUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E84BDA6F858E0FB1A933359C94BA1 /* PageUpdates.swift */; };
+		B5B1A825BE1225F83D844ABF1D35152F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8300F47EEB39E49255907D5DFC5B2A48 /* Foundation.framework */; };
+		B78D11FFA91136A24C03710613D53020 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AF7101F750173696D251DC0479B37 /* Keychain.swift */; };
+		B9E4138FB9B25326F1665657F55326EA /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904C94C08C03FF7446C7C00791C058 /* HCSStarRatingView.m */; };
+		BA06E9EEDA7E1EECA880F71FDDC6CCEF /* QuadratTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = AC10E425D433B46FAFBB3BC9F04EDB5E /* QuadratTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB95A54D231B27B364D2EE97910DC652 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414E076EA926D34E4634DF5984B387B /* Users.swift */; };
+		BBAD478605AB90A719E04EBFD61B03B1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B18CFD1486B0ACF3CB12B67EEBF1 /* Endpoint.swift */; };
+		BE99B3E5E10A237AA466451E1D1C9B55 /* Specials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D41C4867600E4B1CE29A9106EA077D /* Specials.swift */; };
+		BF6C79C607854C219C095B7FF8DD28A6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0751A36C2366E52C22DA60B6B0A6D /* Request.swift */; };
+		DAC43CCCAE34AFE0AEBAB218BBAE776F /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7D45F8B145F0725F20A14C0368606 /* Tips.swift */; };
+		E17EFDCC12F4C81A725F38D2ED15439F /* HCSStarRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C460EEEC11A30386500F40AD2FAD701C /* HCSStarRatingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4272310F071F55AC454AB7A7EA578F3 /* NetworkActivityIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F41168C6C868D222C77EBE99A509650 /* NetworkActivityIndicatorController.swift */; };
+		E60484100B4A69AAD47C8F80452CB643 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2506A501F3ACFB52A42D50A9699777 /* Pages.swift */; };
+		E657889761465CA6A1B7A4C0E8234B17 /* QuadratTouch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 899B1D1E9CDE88F0ACD08C3FF6E25CC5 /* QuadratTouch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E693E1ACF46C30FF1EA7AC97A1AFA6D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8300F47EEB39E49255907D5DFC5B2A48 /* Foundation.framework */; };
+		F399A00F584C465C72E43E31844F80D4 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2849DA0533D9AAECB41A4828EFFA93A5 /* Events.swift */; };
+		FDEB3E0E99210BD3A2A1A2924435B6CE /* Checkins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B53C3F787833AC5C0719D3F1F3A37 /* Checkins.swift */; };
+		FFDC74BE97C6D645D26883F16533220D /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0CC39AA10BA93225EBAF1C186D6D04 /* Authorizer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F19B92E94448AAC5460AA916EBC023D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B6BB2C503560080E3358AAE5FC5650F;
+			remoteInfo = QuadratTouch;
+		};
+		69A2F9C16DD38D74B339E6E66F010D9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97E5D28D3DA6F0CA23C263B2B5833B9F;
+			remoteInfo = HCSStarRatingView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		096B53C3F787833AC5C0719D3F1F3A37 /* Checkins.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checkins.swift; path = Source/Shared/Endpoints/Checkins.swift; sourceTree = "<group>"; };
+		0AB0751A36C2366E52C22DA60B6B0A6D /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Shared/Request.swift; sourceTree = "<group>"; };
+		0C844B6A0294A7FA364D056AB0665AFA /* Pods-CheersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D4351C96CA048B5037F58BEF95933C5 /* Pods-Cheers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cheers.release.xcconfig"; sourceTree = "<group>"; };
+		0D7219921F39E1CD4FF9E45687961DA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		149907CEEEAE2A61D39C6EB4CB8571B8 /* Pods-CheersTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheersTests-frameworks.sh"; sourceTree = "<group>"; };
+		150408427BB5B378483F1D0409C5318B /* HCSStarRatingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCSStarRatingView.xcconfig; sourceTree = "<group>"; };
+		1AC9A15F506FA43C7D695A2B56060149 /* QuadratTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuadratTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3DA090537515A5CFAD5A54E7EC2568 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Shared/Result.swift; sourceTree = "<group>"; };
+		22E43F8E640F1BAE348355F8461F83F6 /* Pods-CheersUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheersUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2414E076EA926D34E4634DF5984B387B /* Users.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Users.swift; path = Source/Shared/Endpoints/Users.swift; sourceTree = "<group>"; };
+		25E7D45F8B145F0725F20A14C0368606 /* Tips.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tips.swift; path = Source/Shared/Endpoints/Tips.swift; sourceTree = "<group>"; };
+		2849DA0533D9AAECB41A4828EFFA93A5 /* Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Events.swift; path = Source/Shared/Endpoints/Events.swift; sourceTree = "<group>"; };
+		2FB4AC023C084972707AB6E4F7B9F214 /* Pods-CheersUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheersUITests-resources.sh"; sourceTree = "<group>"; };
+		336C702D890C08CF12AB775DD6F96DD1 /* Pods-Cheers-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cheers-resources.sh"; sourceTree = "<group>"; };
+		387F577B9B0DCB415029B4A4894C17DA /* Pods-CheersTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheersTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3BE9AAB4CAEDBED8A16EBC873D5CF01A /* QuadratTouch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = QuadratTouch.modulemap; sourceTree = "<group>"; };
+		40B0591CCE1F3A290C8A6E6B8FECC940 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Shared/Logger.swift; sourceTree = "<group>"; };
+		45EFF3396D57EDCD584D0FCBBB39EE3F /* Pods-Cheers-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cheers-acknowledgements.plist"; sourceTree = "<group>"; };
+		49A592EBFADCC5D13460ED782205889A /* Pods_Cheers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cheers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB64B1D6844C8B35A3FD15C896355AE /* AuthorizationViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AuthorizationViewController.xib; path = Source/iOS/AuthorizationViewController.xib; sourceTree = "<group>"; };
+		4CFDE4532A36D8248A27AB8516666458 /* Lists.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lists.swift; path = Source/Shared/Endpoints/Lists.swift; sourceTree = "<group>"; };
+		4D78ACF0F64F74E29F0C53D59E6FF0C4 /* Task.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Source/Shared/Task.swift; sourceTree = "<group>"; };
+		532DF12B2C7FECCEC4EB4CBEA5ECBC7A /* Pods-CheersUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheersUITests-frameworks.sh"; sourceTree = "<group>"; };
+		5D9C7FEBB4F3E2EB60F6E0A70EA4132D /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Source/Shared/Configuration.swift; sourceTree = "<group>"; };
+		5F41168C6C868D222C77EBE99A509650 /* NetworkActivityIndicatorController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkActivityIndicatorController.swift; path = Source/Shared/NetworkActivityIndicatorController.swift; sourceTree = "<group>"; };
+		62D41C4867600E4B1CE29A9106EA077D /* Specials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Specials.swift; path = Source/Shared/Endpoints/Specials.swift; sourceTree = "<group>"; };
+		64904C94C08C03FF7446C7C00791C058 /* HCSStarRatingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCSStarRatingView.m; path = HCSStarRatingView/HCSStarRatingView.m; sourceTree = "<group>"; };
+		64CD11F92F123F096B9543791094D1BE /* QuadratTouch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QuadratTouch-dummy.m"; sourceTree = "<group>"; };
+		6530DFEA5D3CA8663252205687830689 /* HCSStarRatingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCSStarRatingView-umbrella.h"; sourceTree = "<group>"; };
+		66DF1C559F9A175C67BE0CB2C350CD72 /* Pods-CheersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		679E84BDA6F858E0FB1A933359C94BA1 /* PageUpdates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageUpdates.swift; path = Source/Shared/Endpoints/PageUpdates.swift; sourceTree = "<group>"; };
+		696670A2776A4BE37421B14C5E97ED18 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72BA0A5DE55320075411779FDC1D9B71 /* Updates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updates.swift; path = Source/Shared/Endpoints/Updates.swift; sourceTree = "<group>"; };
+		776DD5CF45C1F4EC44F996B67F0D3D05 /* Pods-Cheers-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cheers-acknowledgements.markdown"; sourceTree = "<group>"; };
+		79E3FD7A43C5E8AD9C1D2E32351C27D0 /* Pods-Cheers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cheers-umbrella.h"; sourceTree = "<group>"; };
+		7A0CC39AA10BA93225EBAF1C186D6D04 /* Authorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authorizer.swift; path = Source/Shared/Authorizer.swift; sourceTree = "<group>"; };
+		7A2506A501F3ACFB52A42D50A9699777 /* Pages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pages.swift; path = Source/Shared/Endpoints/Pages.swift; sourceTree = "<group>"; };
+		7B62E4ABAB6EDF75FF1573B14C65D764 /* Pods-CheersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8300F47EEB39E49255907D5DFC5B2A48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		86A03A3E5FCA85493A7BB0C60BD80498 /* Pods-CheersTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheersTests-resources.sh"; sourceTree = "<group>"; };
+		87468EED5D511DA889E2914576D3FFC2 /* HCSStarRatingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCSStarRatingView-prefix.pch"; sourceTree = "<group>"; };
+		87B8F46AD905037C946B350C55815F23 /* Settings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Source/Shared/Endpoints/Settings.swift; sourceTree = "<group>"; };
+		899B1D1E9CDE88F0ACD08C3FF6E25CC5 /* QuadratTouch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuadratTouch-umbrella.h"; sourceTree = "<group>"; };
+		8BA24AA0548E71617A6EA4866F4A194E /* VenueGroups.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VenueGroups.swift; path = Source/Shared/Endpoints/VenueGroups.swift; sourceTree = "<group>"; };
+		910057C1FFCE94D436E6AB5565E0785B /* DataCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataCache.swift; path = Source/Shared/DataCache.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93DDBD715F8AD15E9994F66F6F6C0082 /* OauthErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OauthErrors.swift; path = Source/Shared/OauthErrors.swift; sourceTree = "<group>"; };
+		96583EB93F2964A3CD3D217986A86A88 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96EEE304EB14FBB7582C79EDE054D0A5 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = Source/iOS/AuthorizationViewController.swift; sourceTree = "<group>"; };
+		991A9AAFD82A3A2DFBE5BA7B0395325A /* Pods-CheersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheersTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D46EB55655AB70415C78288C2EE4067 /* Pods-Cheers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cheers-dummy.m"; sourceTree = "<group>"; };
+		9E2420326109A476639A283EC9B93F01 /* HCSStarRatingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCSStarRatingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E3BDD6470882AF3B47994E3D74C1F4 /* HCSStarRatingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HCSStarRatingView-dummy.m"; sourceTree = "<group>"; };
+		A628064BEAD7621D15042B9C6AE57CD2 /* Parameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parameters.swift; path = Source/Shared/Parameters.swift; sourceTree = "<group>"; };
+		AC10E425D433B46FAFBB3BC9F04EDB5E /* QuadratTouch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuadratTouch.h; path = Source/QuadratTouch/QuadratTouch.h; sourceTree = "<group>"; };
+		AD77721CE23AB31A4B19F0CD993664AA /* NativeTouchAuthorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeTouchAuthorizer.swift; path = Source/iOS/NativeTouchAuthorizer.swift; sourceTree = "<group>"; };
+		B34309026629A8F679D817654356A38B /* Photos.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Photos.swift; path = Source/Shared/Endpoints/Photos.swift; sourceTree = "<group>"; };
+		B4FC378B741231F7054CBACAA7E8F572 /* Pods-Cheers-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cheers-frameworks.sh"; sourceTree = "<group>"; };
+		B56C8A426B6F505199FF858296B8CC22 /* TouchAuthorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TouchAuthorizer.swift; path = Source/iOS/TouchAuthorizer.swift; sourceTree = "<group>"; };
+		C460EEEC11A30386500F40AD2FAD701C /* HCSStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCSStarRatingView.h; path = HCSStarRatingView/HCSStarRatingView.h; sourceTree = "<group>"; };
+		C6214B193EA4C8B3C3D3BA7842A1BD42 /* Venues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Venues.swift; path = Source/Shared/Endpoints/Venues.swift; sourceTree = "<group>"; };
+		CCFEC8572B369A423A54820091ACB399 /* Authorization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authorization.swift; path = Source/iOS/Authorization.swift; sourceTree = "<group>"; };
+		CDF3B18CFD1486B0ACF3CB12B67EEBF1 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Source/Shared/Endpoints/Endpoint.swift; sourceTree = "<group>"; };
+		CF6C9C71034D0BC750616A664958B4A3 /* libPods-CheersTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheersTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D11DBC809503F0D7D8D2A81C5CE4A5FF /* Pods-CheersUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheersUITests-dummy.m"; sourceTree = "<group>"; };
+		D28CFF4A00D93561B9C946C621D16500 /* QuadratTouch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuadratTouch-prefix.pch"; sourceTree = "<group>"; };
+		D2EDCD9947207C9F31F4DEB1D695F8DC /* Pods-Cheers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Cheers.modulemap"; sourceTree = "<group>"; };
+		D31F3B3B640C305172B34106CFCFEDCC /* Multi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multi.swift; path = Source/Shared/Endpoints/Multi.swift; sourceTree = "<group>"; };
+		D6AA8CEB42DD25C1D1DCF1F1ECC236BD /* libPods-CheersUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheersUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90117E1FE36FA5799D3AB7FA2799140 /* Pods-CheersTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheersTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DA18EE9074936494F4CD546507707FC6 /* Pods-CheersUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheersUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DA4B764FA77D98BBAFEAA39B85D2D11B /* HCSStarRatingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HCSStarRatingView.modulemap; sourceTree = "<group>"; };
+		DB4B821292E24E265EEF4FDAA9A14E31 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Shared/Session.swift; sourceTree = "<group>"; };
+		DF3EA14D67493495ECF122DF3BF47228 /* Pods-Cheers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cheers.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0FDB9C92A58C19292E1814268B360A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFBC039730A7DF30C63DEA85A5D05C15 /* Pods-CheersTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheersTests-dummy.m"; sourceTree = "<group>"; };
+		F18AF7101F750173696D251DC0479B37 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Source/Shared/Keychain.swift; sourceTree = "<group>"; };
+		F60643EE0762EFBA3844C3D6301379A6 /* QuadratTouch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QuadratTouch.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		517BA5DF005C90A785EEE081DA90D722 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5B1A825BE1225F83D844ABF1D35152F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8885A9DB3C831F65A3EB45727DECA7E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55F03CF4CE81D12B8BB2BAAB5B3FA0E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D27E0B166382DF6F86E01484190243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E693E1ACF46C30FF1EA7AC97A1AFA6D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08F5F1B42A143D7CDE7D0F9E257E6E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713E5C09F7EA6684C1F79D3F7E261313 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F6AD6E9FBB0F6856B5A6EFCD581FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B406E939890AB5FC879F024B99878DF /* Foundation.framework in Frameworks */,
+				6F7877E7D93C66D5AD22D9AEA4DC0B5F /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		177366B6772FB9CCBF191A61FA998E11 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EE9A011DF98577940F345EE37689535 /* Pods-Cheers */,
+				6CCF4C0711DBC846724D9A338A61724D /* Pods-CheersTests */,
+				64D83503EBED4810F97E7590721C7A64 /* Pods-CheersUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1F8F379A68F47C2233DCF945EC6993A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CB64B1D6844C8B35A3FD15C896355AE /* AuthorizationViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1D77D531BDDEEE979D1705B7870C1FA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B3A683C817E7219AF61DF1D6E8090F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E2420326109A476639A283EC9B93F01 /* HCSStarRatingView.framework */,
+				CF6C9C71034D0BC750616A664958B4A3 /* libPods-CheersTests.a */,
+				D6AA8CEB42DD25C1D1DCF1F1ECC236BD /* libPods-CheersUITests.a */,
+				49A592EBFADCC5D13460ED782205889A /* Pods_Cheers.framework */,
+				1AC9A15F506FA43C7D695A2B56060149 /* QuadratTouch.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EE9A011DF98577940F345EE37689535 /* Pods-Cheers */ = {
+			isa = PBXGroup;
+			children = (
+				696670A2776A4BE37421B14C5E97ED18 /* Info.plist */,
+				D2EDCD9947207C9F31F4DEB1D695F8DC /* Pods-Cheers.modulemap */,
+				776DD5CF45C1F4EC44F996B67F0D3D05 /* Pods-Cheers-acknowledgements.markdown */,
+				45EFF3396D57EDCD584D0FCBBB39EE3F /* Pods-Cheers-acknowledgements.plist */,
+				9D46EB55655AB70415C78288C2EE4067 /* Pods-Cheers-dummy.m */,
+				B4FC378B741231F7054CBACAA7E8F572 /* Pods-Cheers-frameworks.sh */,
+				336C702D890C08CF12AB775DD6F96DD1 /* Pods-Cheers-resources.sh */,
+				79E3FD7A43C5E8AD9C1D2E32351C27D0 /* Pods-Cheers-umbrella.h */,
+				DF3EA14D67493495ECF122DF3BF47228 /* Pods-Cheers.debug.xcconfig */,
+				0D4351C96CA048B5037F58BEF95933C5 /* Pods-Cheers.release.xcconfig */,
+			);
+			name = "Pods-Cheers";
+			path = "Target Support Files/Pods-Cheers";
+			sourceTree = "<group>";
+		};
+		50FD5D7F48742D7E13A6D1C023A23F3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A922D38E2A00EDDBE0260BA8EA7A17AD /* HCSStarRatingView */,
+				9064A79AB313DCB4E34812EFE4499BA2 /* QuadratTouch */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64D83503EBED4810F97E7590721C7A64 /* Pods-CheersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA18EE9074936494F4CD546507707FC6 /* Pods-CheersUITests-acknowledgements.markdown */,
+				22E43F8E640F1BAE348355F8461F83F6 /* Pods-CheersUITests-acknowledgements.plist */,
+				D11DBC809503F0D7D8D2A81C5CE4A5FF /* Pods-CheersUITests-dummy.m */,
+				532DF12B2C7FECCEC4EB4CBEA5ECBC7A /* Pods-CheersUITests-frameworks.sh */,
+				2FB4AC023C084972707AB6E4F7B9F214 /* Pods-CheersUITests-resources.sh */,
+				7B62E4ABAB6EDF75FF1573B14C65D764 /* Pods-CheersUITests.debug.xcconfig */,
+				66DF1C559F9A175C67BE0CB2C350CD72 /* Pods-CheersUITests.release.xcconfig */,
+			);
+			name = "Pods-CheersUITests";
+			path = "Target Support Files/Pods-CheersUITests";
+			sourceTree = "<group>";
+		};
+		6CCF4C0711DBC846724D9A338A61724D /* Pods-CheersTests */ = {
+			isa = PBXGroup;
+			children = (
+				387F577B9B0DCB415029B4A4894C17DA /* Pods-CheersTests-acknowledgements.markdown */,
+				D90117E1FE36FA5799D3AB7FA2799140 /* Pods-CheersTests-acknowledgements.plist */,
+				EFBC039730A7DF30C63DEA85A5D05C15 /* Pods-CheersTests-dummy.m */,
+				149907CEEEAE2A61D39C6EB4CB8571B8 /* Pods-CheersTests-frameworks.sh */,
+				86A03A3E5FCA85493A7BB0C60BD80498 /* Pods-CheersTests-resources.sh */,
+				0C844B6A0294A7FA364D056AB0665AFA /* Pods-CheersTests.debug.xcconfig */,
+				991A9AAFD82A3A2DFBE5BA7B0395325A /* Pods-CheersTests.release.xcconfig */,
+			);
+			name = "Pods-CheersTests";
+			path = "Target Support Files/Pods-CheersTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				50FD5D7F48742D7E13A6D1C023A23F3F /* Pods */,
+				4B3A683C817E7219AF61DF1D6E8090F1 /* Products */,
+				177366B6772FB9CCBF191A61FA998E11 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9064A79AB313DCB4E34812EFE4499BA2 /* QuadratTouch */ = {
+			isa = PBXGroup;
+			children = (
+				CCFEC8572B369A423A54820091ACB399 /* Authorization.swift */,
+				96EEE304EB14FBB7582C79EDE054D0A5 /* AuthorizationViewController.swift */,
+				7A0CC39AA10BA93225EBAF1C186D6D04 /* Authorizer.swift */,
+				096B53C3F787833AC5C0719D3F1F3A37 /* Checkins.swift */,
+				5D9C7FEBB4F3E2EB60F6E0A70EA4132D /* Configuration.swift */,
+				910057C1FFCE94D436E6AB5565E0785B /* DataCache.swift */,
+				CDF3B18CFD1486B0ACF3CB12B67EEBF1 /* Endpoint.swift */,
+				2849DA0533D9AAECB41A4828EFFA93A5 /* Events.swift */,
+				F18AF7101F750173696D251DC0479B37 /* Keychain.swift */,
+				4CFDE4532A36D8248A27AB8516666458 /* Lists.swift */,
+				40B0591CCE1F3A290C8A6E6B8FECC940 /* Logger.swift */,
+				D31F3B3B640C305172B34106CFCFEDCC /* Multi.swift */,
+				AD77721CE23AB31A4B19F0CD993664AA /* NativeTouchAuthorizer.swift */,
+				5F41168C6C868D222C77EBE99A509650 /* NetworkActivityIndicatorController.swift */,
+				93DDBD715F8AD15E9994F66F6F6C0082 /* OauthErrors.swift */,
+				7A2506A501F3ACFB52A42D50A9699777 /* Pages.swift */,
+				679E84BDA6F858E0FB1A933359C94BA1 /* PageUpdates.swift */,
+				A628064BEAD7621D15042B9C6AE57CD2 /* Parameters.swift */,
+				B34309026629A8F679D817654356A38B /* Photos.swift */,
+				AC10E425D433B46FAFBB3BC9F04EDB5E /* QuadratTouch.h */,
+				0AB0751A36C2366E52C22DA60B6B0A6D /* Request.swift */,
+				1F3DA090537515A5CFAD5A54E7EC2568 /* Result.swift */,
+				DB4B821292E24E265EEF4FDAA9A14E31 /* Session.swift */,
+				87B8F46AD905037C946B350C55815F23 /* Settings.swift */,
+				62D41C4867600E4B1CE29A9106EA077D /* Specials.swift */,
+				4D78ACF0F64F74E29F0C53D59E6FF0C4 /* Task.swift */,
+				25E7D45F8B145F0725F20A14C0368606 /* Tips.swift */,
+				B56C8A426B6F505199FF858296B8CC22 /* TouchAuthorizer.swift */,
+				72BA0A5DE55320075411779FDC1D9B71 /* Updates.swift */,
+				2414E076EA926D34E4634DF5984B387B /* Users.swift */,
+				8BA24AA0548E71617A6EA4866F4A194E /* VenueGroups.swift */,
+				C6214B193EA4C8B3C3D3BA7842A1BD42 /* Venues.swift */,
+				1F8F379A68F47C2233DCF945EC6993A5 /* Resources */,
+				E68CFC68BCE44FAC746D68276535F2F0 /* Support Files */,
+			);
+			path = QuadratTouch;
+			sourceTree = "<group>";
+		};
+		A922D38E2A00EDDBE0260BA8EA7A17AD /* HCSStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				C460EEEC11A30386500F40AD2FAD701C /* HCSStarRatingView.h */,
+				64904C94C08C03FF7446C7C00791C058 /* HCSStarRatingView.m */,
+				D270D2F47A60ED6C64283491325F9CBF /* Support Files */,
+			);
+			path = HCSStarRatingView;
+			sourceTree = "<group>";
+		};
+		B1D77D531BDDEEE979D1705B7870C1FA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8300F47EEB39E49255907D5DFC5B2A48 /* Foundation.framework */,
+				0D7219921F39E1CD4FF9E45687961DA8 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D270D2F47A60ED6C64283491325F9CBF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA4B764FA77D98BBAFEAA39B85D2D11B /* HCSStarRatingView.modulemap */,
+				150408427BB5B378483F1D0409C5318B /* HCSStarRatingView.xcconfig */,
+				A5E3BDD6470882AF3B47994E3D74C1F4 /* HCSStarRatingView-dummy.m */,
+				87468EED5D511DA889E2914576D3FFC2 /* HCSStarRatingView-prefix.pch */,
+				6530DFEA5D3CA8663252205687830689 /* HCSStarRatingView-umbrella.h */,
+				96583EB93F2964A3CD3D217986A86A88 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HCSStarRatingView";
+			sourceTree = "<group>";
+		};
+		E68CFC68BCE44FAC746D68276535F2F0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB0FDB9C92A58C19292E1814268B360A /* Info.plist */,
+				3BE9AAB4CAEDBED8A16EBC873D5CF01A /* QuadratTouch.modulemap */,
+				F60643EE0762EFBA3844C3D6301379A6 /* QuadratTouch.xcconfig */,
+				64CD11F92F123F096B9543791094D1BE /* QuadratTouch-dummy.m */,
+				D28CFF4A00D93561B9C946C621D16500 /* QuadratTouch-prefix.pch */,
+				899B1D1E9CDE88F0ACD08C3FF6E25CC5 /* QuadratTouch-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QuadratTouch";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		420870CAF542822B11D7A97B0682BB16 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E657889761465CA6A1B7A4C0E8234B17 /* QuadratTouch-umbrella.h in Headers */,
+				BA06E9EEDA7E1EECA880F71FDDC6CCEF /* QuadratTouch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B66562041CA8B84C8FC2D4AE0702A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F652CDBE241C8EB719FA2DCFA3C3302 /* Pods-Cheers-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FDFEEAE847FCB0DAB8ED9E1A05C1DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E242E3D7D2DC8232DA7B907611FE046 /* HCSStarRatingView-umbrella.h in Headers */,
+				E17EFDCC12F4C81A725F38D2ED15439F /* HCSStarRatingView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B6BB2C503560080E3358AAE5FC5650F /* QuadratTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9768BF036D785FDC8723765AB331F836 /* Build configuration list for PBXNativeTarget "QuadratTouch" */;
+			buildPhases = (
+				9FBBC2CC3307DC665F9569D5541C4587 /* Sources */,
+				D4F6AD6E9FBB0F6856B5A6EFCD581FCF /* Frameworks */,
+				420870CAF542822B11D7A97B0682BB16 /* Headers */,
+				3517100F604F5D4D69EBA218A8C76995 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuadratTouch;
+			productName = QuadratTouch;
+			productReference = 1AC9A15F506FA43C7D695A2B56060149 /* QuadratTouch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5DCB8F5124F7718C3157FCC40D942463 /* Pods-CheersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2082751D9DEB5FD926F5C710D716E565 /* Build configuration list for PBXNativeTarget "Pods-CheersTests" */;
+			buildPhases = (
+				59EEB7201D44E6907F4766476D434620 /* Sources */,
+				8885A9DB3C831F65A3EB45727DECA7E4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CheersTests";
+			productName = "Pods-CheersTests";
+			productReference = CF6C9C71034D0BC750616A664958B4A3 /* libPods-CheersTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		70A4D9654916FF596C289A2C6550ADAF /* Pods-CheersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE3790DF856A6C201FC06747C535716C /* Build configuration list for PBXNativeTarget "Pods-CheersUITests" */;
+			buildPhases = (
+				03A4EA7E3636A6FA81F5A58B77634B3E /* Sources */,
+				517BA5DF005C90A785EEE081DA90D722 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CheersUITests";
+			productName = "Pods-CheersUITests";
+			productReference = D6AA8CEB42DD25C1D1DCF1F1ECC236BD /* libPods-CheersUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		97E5D28D3DA6F0CA23C263B2B5833B9F /* HCSStarRatingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE4D831CC80A1B614ECF81529C9DCDB /* Build configuration list for PBXNativeTarget "HCSStarRatingView" */;
+			buildPhases = (
+				69CD793BAA43D79F3997B84E2DD16FA3 /* Sources */,
+				D08F5F1B42A143D7CDE7D0F9E257E6E5 /* Frameworks */,
+				B3FDFEEAE847FCB0DAB8ED9E1A05C1DB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HCSStarRatingView;
+			productName = HCSStarRatingView;
+			productReference = 9E2420326109A476639A283EC9B93F01 /* HCSStarRatingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ACC288E69436318760EBCB22A285EF48 /* Pods-Cheers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E6242A81FC8DA7816A2F49058BB5B43 /* Build configuration list for PBXNativeTarget "Pods-Cheers" */;
+			buildPhases = (
+				B033E75AE0A3A63B6EB71C79E16C005D /* Sources */,
+				C9D27E0B166382DF6F86E01484190243 /* Frameworks */,
+				A1B66562041CA8B84C8FC2D4AE0702A3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E57D0D4B632D4DD1B6DA8D241D4EC288 /* PBXTargetDependency */,
+				93EE94C320FF8FF16B2B5A851FA46B3A /* PBXTargetDependency */,
+			);
+			name = "Pods-Cheers";
+			productName = "Pods-Cheers";
+			productReference = 49A592EBFADCC5D13460ED782205889A /* Pods_Cheers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4B3A683C817E7219AF61DF1D6E8090F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97E5D28D3DA6F0CA23C263B2B5833B9F /* HCSStarRatingView */,
+				ACC288E69436318760EBCB22A285EF48 /* Pods-Cheers */,
+				5DCB8F5124F7718C3157FCC40D942463 /* Pods-CheersTests */,
+				70A4D9654916FF596C289A2C6550ADAF /* Pods-CheersUITests */,
+				4B6BB2C503560080E3358AAE5FC5650F /* QuadratTouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3517100F604F5D4D69EBA218A8C76995 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B77061A150D3F763BD436C902A45E9 /* AuthorizationViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03A4EA7E3636A6FA81F5A58B77634B3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CCF0A1253687C9DA7D3D0DB04198628 /* Pods-CheersUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59EEB7201D44E6907F4766476D434620 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271C6219D10FE4C12FFEF2588F4C9B2D /* Pods-CheersTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CD793BAA43D79F3997B84E2DD16FA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19316A452242E675A3740E8A16E42160 /* HCSStarRatingView-dummy.m in Sources */,
+				B9E4138FB9B25326F1665657F55326EA /* HCSStarRatingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FBBC2CC3307DC665F9569D5541C4587 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A43933AF63D497EBE4FFEED2C6A518B /* Authorization.swift in Sources */,
+				576F347CBF9603D3F72104A4D6DEFC0C /* AuthorizationViewController.swift in Sources */,
+				FFDC74BE97C6D645D26883F16533220D /* Authorizer.swift in Sources */,
+				FDEB3E0E99210BD3A2A1A2924435B6CE /* Checkins.swift in Sources */,
+				81A4C9D138CC58776B6949CAB121A096 /* Configuration.swift in Sources */,
+				718DA9FA28BDE26C679543A6BFD5082D /* DataCache.swift in Sources */,
+				BBAD478605AB90A719E04EBFD61B03B1 /* Endpoint.swift in Sources */,
+				F399A00F584C465C72E43E31844F80D4 /* Events.swift in Sources */,
+				B78D11FFA91136A24C03710613D53020 /* Keychain.swift in Sources */,
+				4A6168B7C081970ED5D7B077D2615A1F /* Lists.swift in Sources */,
+				0D6D01EE1B483F3E818736E5228FF44E /* Logger.swift in Sources */,
+				69CF0C9CE3C6C8B777A23762D7D8925A /* Multi.swift in Sources */,
+				3234F7A1F21389EFF9C7FBBCE8E26A6E /* NativeTouchAuthorizer.swift in Sources */,
+				E4272310F071F55AC454AB7A7EA578F3 /* NetworkActivityIndicatorController.swift in Sources */,
+				63E2C811248D7CEE68038BC31138F9BD /* OauthErrors.swift in Sources */,
+				E60484100B4A69AAD47C8F80452CB643 /* Pages.swift in Sources */,
+				A42EC3E50D7C4910AE56B394EA11A60E /* PageUpdates.swift in Sources */,
+				A11A9FEC34912B213FBC6643C49EEEE4 /* Parameters.swift in Sources */,
+				6F6DB8BB74C1748F6DD94BD2771F3CA2 /* Photos.swift in Sources */,
+				98E058BFFC805D42C97146501A2F8593 /* QuadratTouch-dummy.m in Sources */,
+				BF6C79C607854C219C095B7FF8DD28A6 /* Request.swift in Sources */,
+				663BA2FD0F86597BDD169E03024CCC71 /* Result.swift in Sources */,
+				50EC02DBB5D685DF0BFB9ADB60369018 /* Session.swift in Sources */,
+				099A9BCD4A86F6F7613D2D05E46E6980 /* Settings.swift in Sources */,
+				BE99B3E5E10A237AA466451E1D1C9B55 /* Specials.swift in Sources */,
+				651B3D956E0F12BB48248D974DD36E80 /* Task.swift in Sources */,
+				DAC43CCCAE34AFE0AEBAB218BBAE776F /* Tips.swift in Sources */,
+				94B84AC79EFFAAED3809DC30363581BE /* TouchAuthorizer.swift in Sources */,
+				6D6FAC52E2AA68EA49950EC2A4CB6764 /* Updates.swift in Sources */,
+				BB95A54D231B27B364D2EE97910DC652 /* Users.swift in Sources */,
+				43E478274F8973958371EB17803D5597 /* VenueGroups.swift in Sources */,
+				0F95891690FF1D257BFB9A5AD4A69C81 /* Venues.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B033E75AE0A3A63B6EB71C79E16C005D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59AF04D57EEC58915D982F8929657695 /* Pods-Cheers-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93EE94C320FF8FF16B2B5A851FA46B3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuadratTouch;
+			target = 4B6BB2C503560080E3358AAE5FC5650F /* QuadratTouch */;
+			targetProxy = 2F19B92E94448AAC5460AA916EBC023D /* PBXContainerItemProxy */;
+		};
+		E57D0D4B632D4DD1B6DA8D241D4EC288 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HCSStarRatingView;
+			target = 97E5D28D3DA6F0CA23C263B2B5833B9F /* HCSStarRatingView */;
+			targetProxy = 69A2F9C16DD38D74B339E6E66F010D9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		073DC332A73E98659BD2AD19CDCDCA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 991A9AAFD82A3A2DFBE5BA7B0395325A /* Pods-CheersTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1CA5BACF66BF3DB8533D8E81CBFC6D81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 150408427BB5B378483F1D0409C5318B /* HCSStarRatingView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HCSStarRatingView/HCSStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HCSStarRatingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HCSStarRatingView/HCSStarRatingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HCSStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6FE9BF7FD8C73E245AC42C3FD8DF2E7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60643EE0762EFBA3844C3D6301379A6 /* QuadratTouch.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QuadratTouch/QuadratTouch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QuadratTouch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QuadratTouch/QuadratTouch.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = QuadratTouch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		955A461E60686EF6F705AD02B3504407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C844B6A0294A7FA364D056AB0665AFA /* Pods-CheersTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AB1955D99A768486A82C0C0F1F1E0FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF3EA14D67493495ECF122DF3BF47228 /* Pods-Cheers.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Cheers/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cheers/Pods-Cheers.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Cheers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE032B32B3F1E004111B097F31356D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D4351C96CA048B5037F58BEF95933C5 /* Pods-Cheers.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Cheers/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cheers/Pods-Cheers.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Cheers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C19A00A816A12AEA4FF11381C8D7C422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B62E4ABAB6EDF75FF1573B14C65D764 /* Pods-CheersUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C68B512CB2BA26800817C4A144E60299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66DF1C559F9A175C67BE0CB2C350CD72 /* Pods-CheersUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E0F9FE318BF17FAFC8120ECB9A558396 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 150408427BB5B378483F1D0409C5318B /* HCSStarRatingView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HCSStarRatingView/HCSStarRatingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HCSStarRatingView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HCSStarRatingView/HCSStarRatingView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HCSStarRatingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1C16A357FFB4AB16BEE2450A14BC30F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60643EE0762EFBA3844C3D6301379A6 /* QuadratTouch.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QuadratTouch/QuadratTouch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QuadratTouch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QuadratTouch/QuadratTouch.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = QuadratTouch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2082751D9DEB5FD926F5C710D716E565 /* Build configuration list for PBXNativeTarget "Pods-CheersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				955A461E60686EF6F705AD02B3504407 /* Debug */,
+				073DC332A73E98659BD2AD19CDCDCA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
+				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9768BF036D785FDC8723765AB331F836 /* Build configuration list for PBXNativeTarget "QuadratTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1C16A357FFB4AB16BEE2450A14BC30F /* Debug */,
+				6FE9BF7FD8C73E245AC42C3FD8DF2E7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AE4D831CC80A1B614ECF81529C9DCDB /* Build configuration list for PBXNativeTarget "HCSStarRatingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CA5BACF66BF3DB8533D8E81CBFC6D81 /* Debug */,
+				E0F9FE318BF17FAFC8120ECB9A558396 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E6242A81FC8DA7816A2F49058BB5B43 /* Build configuration list for PBXNativeTarget "Pods-Cheers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB1955D99A768486A82C0C0F1F1E0FFA /* Debug */,
+				AE032B32B3F1E004111B097F31356D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE3790DF856A6C201FC06747C535716C /* Build configuration list for PBXNativeTarget "Pods-CheersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19A00A816A12AEA4FF11381C8D7C422 /* Debug */,
+				C68B512CB2BA26800817C4A144E60299 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

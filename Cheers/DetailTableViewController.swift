@@ -76,8 +76,9 @@ class DetailTableViewController: UITableViewController {
                 let rating = coffee?.value(forKey: "rating") as! Int
                 cell.textLabel?.text = "Rating: " + rating.description + "/5"
             case 1:
-                let location = coffee?.value(forKey: "locationName") as! String
-                cell.textLabel?.text = "Location: " + location
+                if let location = coffee?.value(forKey: "locationName"){
+                    cell.textLabel?.text = "Location: " + (location as! String)
+                }
             default:
                 break
                 

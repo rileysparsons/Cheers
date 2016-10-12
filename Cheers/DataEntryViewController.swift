@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import HCSStarRatingView
 
-class DataEntryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, DisclosureTableViewControllerDelegate, LocationTableViewControllerDelegate {
+class DataEntryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, DisclosureTableViewControllerDelegate, LocationTableViewControllerDelegate {
 
 
     @IBOutlet weak var tableView: UITableView!
@@ -20,10 +20,6 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // AppDelegate Singleton
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    // Options provided to user
-    let coffeeTypes = ["Latte", "Cappuccino", "Flat White", "Drip"]
-    let coffeeTags = ["Acidic", "Bright", "Dark", "Strong", "Bold", "Weak", "Burnt", "Floral", "Chocolate"]
     
     // User defined variables for drink
     var selectedCoffeeType:String = "None"
@@ -49,14 +45,18 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.dataSource = self
         
         // Holding space for photo selected by the user
-        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 200))
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200))
+        
+        let addPhotoButton = UIButton(type: .system)
+        addPhotoButton.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200)
+        addPhotoButton.setTitle("Add \u{1f4f8} of \u{2615}", for: .normal)
+        addPhotoButton.setTitleColor(UIColor.black, for: .normal)
+        addPhotoButton.addTarget(self, action: #selector(presentImagePicker), for: .touchUpInside)
+        tableView.tableHeaderView?.addSubview(addPhotoButton)
+        addPhotoButton.bindFrameToSuperview()
         
         // Assigning self as delegate for the imagePickerController that is immediately presented
         imagePickerController.delegate = self
-        
-        // Assigning the correct source for the imagePickerController
-        // FIXME: PhotoLibrary is set for testing on simulator only. Switch to Camera for deployment to device
-        imagePickerController.sourceType = .photoLibrary
     
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier:  "Cell")
@@ -70,43 +70,69 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
 
     
     
-    @IBAction func barButtonTouched(_ sender: AnyObject) {
-        let managedObjectContext = appDelegate.managedObjectContext
-        let entityDescription = NSEntityDescription.entity(forEntityName: "Coffee", in: managedObjectContext)
-        let coffee = NSManagedObject(entity: entityDescription!, insertInto: managedObjectContext)
+    @IBAction func doneBarButtonTouched(_ sender: AnyObject) {
         
-        if (coffeeImage != nil){
-            let coffeeImageData = UIImageJPEGRepresentation(coffeeImage!, 0.5)
+        if checkFieldCompletion() {
+            let managedObjectContext = appDelegate.managedObjectContext
+            let entityDescription = NSEntityDescription.entity(forEntityName: "Coffee", in: managedObjectContext)
+            let coffee = NSManagedObject(entity: entityDescription!, insertInto: managedObjectContext)
             
-            UIGraphicsBeginImageContext(CGSize(width: 50.0, height: 50.0))
-            coffeeImage!.draw(in: CGRect(x: 0,y: 0,width: 50.0, height: 50.0))
-            let coffeeImageThumbnail = UIGraphicsGetImageFromCurrentImageContext();
-            let coffeeThumbnailData = UIImageJPEGRepresentation(coffeeImageThumbnail!, 0.5)
-            UIGraphicsEndImageContext();
+            if (coffeeImage != nil){
+                let coffeeImageData = UIImageJPEGRepresentation(coffeeImage!, 0.5)
+                
+                UIGraphicsBeginImageContext(CGSize(width: 50.0, height: 50.0))
+                coffeeImage!.draw(in: CGRect(x: 0,y: 0,width: 50.0, height: 50.0))
+                let coffeeImageThumbnail = UIGraphicsGetImageFromCurrentImageContext();
+                let coffeeThumbnailData = UIImageJPEGRepresentation(coffeeImageThumbnail!, 0.5)
+                UIGraphicsEndImageContext();
+                
+                coffee.setValue(coffeeThumbnailData, forKey: "thumbnailData")
+                coffee.setValue(coffeeImageData, forKey: "imageData")
+            }
             
-            coffee.setValue(coffeeThumbnailData, forKey: "thumbnailData")
-            coffee.setValue(coffeeImageData, forKey: "imageData")
+            coffee.setValue(selectedCoffeeType, forKey: "type")
+            coffee.setValue(Float(coffeeRating), forKey: "rating")
+            coffee.setValue(selectedCoffeeTags, forKey: "tastingNotes")
+            coffee.setValue(coffeeLocation?["venue"]!["name"]!, forKeyPath: "locationName")
+            coffee.setValue(coffeeLocation?["venue"]!["id"]!, forKeyPath: "locationId")
+            coffee.setValue(coffeeLocation?["venue"]!["lat"]!, forKeyPath: "locationLat")
+            coffee.setValue(coffeeLocation?["venue"]!["long"]!, forKeyPath: "locationLong")
+            coffee.setValue(Date(), forKeyPath: "date")
+            
+            do {
+                try managedObjectContext.save()
+                _ = self.dismiss(animated: true, completion: nil)
+            } catch let error as NSError {
+                print("save failed: \(error)")
+            }
         }
-        
-        coffee.setValue(selectedCoffeeType, forKey: "type")
-        coffee.setValue(Float(coffeeRating), forKey: "rating")
-        coffee.setValue(selectedCoffeeTags, forKey: "tastingNotes")
-        coffee.setValue(coffeeLocation?["venue"]!["name"]!, forKeyPath: "locationName")
-        coffee.setValue(coffeeLocation?["venue"]!["id"]!, forKeyPath: "locationId")
-        coffee.setValue(coffeeLocation?["venue"]!["lat"]!, forKeyPath: "locationLat")
-        coffee.setValue(coffeeLocation?["venue"]!["long"]!, forKeyPath: "locationLong")
-        coffee.setValue(Date(), forKeyPath: "date")
-        
-        do {
-            try managedObjectContext.save()
-            self.navigationController?.popToRootViewController(animated: true)
-        } catch let error as NSError {
-            print("save failed: \(error)")
+
+    }
+    
+    
+    
+    @IBAction func cancelBarButtonTouched(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 1{
+            return 30
         }
+        return 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if section == 0 {
+            return 2
+        } else if section == 1 {
+            return 2
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -119,52 +145,65 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
                 cell.textLabel?.text = "Coffee Type"
                 cell.detailTextLabel?.text = selectedCoffeeType
             case 1:
-                cell = tableView.dequeueReusableCell(withIdentifier: "RatingTableViewCell", for: indexPath) as! RatingTableViewCell
-                (cell as! RatingTableViewCell).ratingView.addTarget(self, action:#selector(DataEntryViewController.didChangeValue(_:)), for: .valueChanged)
-            case 2:
                 cell = tableView.dequeueReusableCell(withIdentifier: "DisclosureCell", for: indexPath)
                 cell.textLabel?.text = "Coffee Shop"
                 if let coffeeShopName = coffeeLocation?["venue"]!["name"]{
                     cell.detailTextLabel?.text = coffeeShopName as? String
+                } else {
+                    cell.detailTextLabel?.text = "None"
                 }
 
-            case 3:
+            default:
+                break
+            }
+        } else if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0:
+                cell = tableView.dequeueReusableCell(withIdentifier: "RatingTableViewCell", for: indexPath) as! RatingTableViewCell
+                (cell as! RatingTableViewCell).ratingView.addTarget(self, action:#selector(DataEntryViewController.didChangeValue(_:)), for: .valueChanged)
+            case 1:
                 cell = tableView.dequeueReusableCell(withIdentifier: "DisclosureCell", for: indexPath)
                 // The first row will display a picker for coffee types
                 cell.textLabel?.text = "Tasting Notes"
                 if (selectedCoffeeTags.count == 0){
                     cell.detailTextLabel?.text = "None"
                 } else {
-                    cell.detailTextLabel?.text = "\(selectedCoffeeTags.count) Tags"
+                    cell.detailTextLabel?.text = "\(selectedCoffeeTags.count)"
                 }
             default:
                 break
             }
+            
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let disclosureTableViewController = DisclosureTableViewController()
+        disclosureTableViewController.delegate = self
         if ((indexPath as NSIndexPath).section == 0){
-            
-            let disclosureTableViewController = DisclosureTableViewController()
-            disclosureTableViewController.delegate = self
             
             switch (indexPath as NSIndexPath).row {
             case 0:
-                disclosureTableViewController.listArray = coffeeTypes
+                disclosureTableViewController.listArray = coffee.types
                 disclosureTableViewController.selectedElements = [selectedCoffeeType]
                 disclosureTableViewController.title = selectTypeTitle
                 disclosureTableViewController.allowMultipleSelections = false
                 self.navigationController?.pushViewController(disclosureTableViewController, animated: true)
             case 1:
-                break
-            case 2:
                 let locationTableViewController = LocationTableViewController()
                 locationTableViewController.delegate = self
+                locationTableViewController.selectedLocation = coffeeLocation
                 self.navigationController?.pushViewController(locationTableViewController, animated: true)
-            case 3:
-                disclosureTableViewController.listArray = coffeeTags
+            default:
+                break
+            }
+        } else if indexPath.section == 1 {
+            switch indexPath.row{
+            case 0:
+                break
+            case 1:
+                disclosureTableViewController.listArray = coffee.characteristics
                 disclosureTableViewController.selectedElements = selectedCoffeeTags
                 disclosureTableViewController.title = addCoffeeTastingNotesTitle
                 disclosureTableViewController.allowMultipleSelections = true
@@ -172,19 +211,21 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             default:
                 break
             }
-            
-            
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func presentImagePicker() {
         if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)){
-            self.navigationController!.present(imagePickerController, animated: true, completion: nil)
+            
+            // Assigning the correct source for the imagePickerController
+            imagePickerController.sourceType = .photoLibrary
+            
+            present(imagePickerController, animated: true, completion: nil)
         } else {
             let noCameraAlertController = UIAlertController(title: "No Camera Found", message: "A photo is required to document the drink", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action: UIAlertAction) in
-                self.navigationController?.popViewController(animated: true)
+                _ = self.dismiss(animated: true, completion: nil)
                 
             })
             noCameraAlertController.addAction(cancelAction)
@@ -198,29 +239,12 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         coffeeImage = image
         
         // Display image as header in table
-        let imageView = UIImageView(image: image)
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 200))
         imageView.clipsToBounds = true
-        imageView.frame = CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 200)
         imageView.contentMode = .scaleAspectFill
+        imageView.image = image
         tableView.tableHeaderView = imageView
         picker.dismiss(animated: true, completion: nil)
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 4
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return coffeeTypes[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedCoffeeType = coffeeTypes[row]
-        print(selectedCoffeeType)
     }
     
     func didChangeValue(_ sender: HCSStarRatingView){
@@ -243,6 +267,35 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.reloadData()
     }
     
+    func venueWasDeselected(_ sender:LocationTableViewController, venue:[String:AnyObject]){
+        coffeeLocation = nil
+        tableView.reloadData()
+    }
+    
+    // Data validation
+    func checkFieldCompletion() -> Bool {
+        
+        if selectedCoffeeType == "None" || selectedCoffeeType ==  ""{
+            return false
+        }
+        
+        if selectedCoffeeTags.isEmpty {
+            return false
+        }
+        
+        if coffeeImage == nil {
+            return false
+        }
+        
+        if (coffeeLocation?.isEmpty)! {
+            return false
+        }
+        
+        return true
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -253,4 +306,18 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     */
 
+}
+
+extension UIView {
+    func bindFrameToSuperview(){
+        guard let superview = self.superview else {
+            print("Call .addSubview prior to bindFrameToSuperview")
+            return
+        }
+        
+        superview.translatesAutoresizingMaskIntoConstraints = false
+        superview.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview":self]))
+        superview.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview":self]))
+        
+    }
 }

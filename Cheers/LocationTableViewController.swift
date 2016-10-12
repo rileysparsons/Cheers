@@ -25,6 +25,8 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
     // Quadrat Touch variables
     var session : Session!
     
+    var selectedLocation : JSONParameters?
+    var selectedCellIndexPath : IndexPath?
     
     
     var locationManager : CLLocationManager!
@@ -74,22 +76,49 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "venueCell", for: indexPath)
         let item = self.venueItems![(indexPath as NSIndexPath).row] as JSONParameters!
-        self.configureCellWithItem(cell, item: item!)
+        self.configureCellWithItem(cell, item: item!, indexPath: indexPath)
+        cell.selectionStyle = .none
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate.venueWasSelected(self, venue: venueItems![(indexPath as NSIndexPath).row])
+        
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+            self.delegate.venueWasDeselected(self, venue: selectedLocation!)
+            selectedLocation = nil
+            selectedCellIndexPath = nil
+        } else {
+            if (selectedLocation != nil){
+                tableView.cellForRow(at: selectedCellIndexPath!)?.accessoryType = .none
+            }
+            selectedCellIndexPath = indexPath
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            selectedLocation = venueItems![(indexPath as NSIndexPath).row]
+            self.delegate.venueWasSelected(self, venue: selectedLocation!)
+        }
+        
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+    }
  
-    func configureCellWithItem(_ cell:UITableViewCell, item: JSONParameters) {
+    func configureCellWithItem(_ cell:UITableViewCell, item: JSONParameters, indexPath: IndexPath) {
         if let venueInfo = item["venue"] as? JSONParameters {
             cell.textLabel?.text = venueInfo["name"] as? String
             if let rating = venueInfo["rating"] as? CGFloat {
                 let number = NSNumber(value: Float(rating) as Float as Float)
                 cell.detailTextLabel?.text = numberFormatter.string(from: number)
             }
+            if selectedLocation != nil {
+               if selectedLocation?["venue"]?["id"] as! String == venueInfo["id"] as! String{
+                    cell.accessoryType = .checkmark
+                    selectedCellIndexPath = indexPath
+                }
+            }
+            
         }
     }
     
@@ -100,6 +129,7 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
         }
         
         let parameters = location.parameters()
+        
         let task = self.session.venues.explore(parameters) {
             (result) -> Void in
             if self.venueItems != nil {
@@ -173,11 +203,13 @@ extension CLLocation {
         let llAcc   = "\(self.horizontalAccuracy)"
         let alt     = "\(self.altitude)"
         let altAcc  = "\(self.verticalAccuracy)"
+        let categoryId = "4bf58dd8d48988d1e0931735"
         let parameters = [
             Parameter.ll:ll,
             Parameter.llAcc:llAcc,
             Parameter.alt:alt,
-            Parameter.altAcc:altAcc
+            Parameter.altAcc:altAcc,
+            Parameter.categoryId:categoryId
         ]
         return parameters
     }
@@ -185,4 +217,5 @@ extension CLLocation {
 
 protocol LocationTableViewControllerDelegate {
     func venueWasSelected(_ sender:LocationTableViewController, venue:[String:AnyObject])
+    func venueWasDeselected(_ sender:LocationTableViewController, venue:[String:AnyObject])
 }

@@ -38,6 +38,8 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We use your camera to take pictures of your coffee!</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We use your camera to take pictures of your coffee!</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We use your location to suggest nearby coffeeshops</string>
 </dict>

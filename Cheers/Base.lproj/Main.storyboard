@@ -39,7 +39,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pJw-Lo-3tl">
                             <connections>
                                 <action selector="addDrink:" destination="BYZ-38-t0r" id="bAr-zg-HIN"/>
-                                <segue destination="HAl-Vg-7K1" kind="show" id="5bQ-9a-ai8"/>
+                                <segue destination="yZF-Ro-myv" kind="presentation" id="5bQ-9a-ai8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -63,25 +63,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hBo-HI-vpE" userLabel="TableView">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hBo-HI-vpE" userLabel="TableView">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DisclosureCell" textLabel="ObA-Kj-dn9" detailTextLabel="CvB-e6-Nna" style="IBUITableViewCellStyleValue1" id="vCe-cH-iVb">
-                                        <rect key="frame" x="0.0" y="92" width="383" height="44"/>
+                                        <rect key="frame" x="0.0" y="120" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCe-cH-iVb" id="hXo-EA-WPo">
-                                            <frame key="frameInset" width="350" height="43.5"/>
+                                            <frame key="frameInset" width="350" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ObA-Kj-dn9">
-                                                    <frame key="frameInset" minX="15" minY="12" width="31.5" height="19.5"/>
+                                                    <frame key="frameInset" minX="15" minY="12" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CvB-e6-Nna">
-                                                    <frame key="frameInset" minX="306.5" minY="12" width="41.5" height="19.5"/>
+                                                    <frame key="frameInset" minX="306" minY="12" width="42" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,9 +103,15 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="Gjw-Dc-ich">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VGM-5n-2Ip">
+                            <color key="tintColor" red="0.96862745100000003" green="0.16862745100000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancelBarButtonTouched:" destination="HAl-Vg-7K1" id="LYh-T7-Tnd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="enj-vu-SXC">
                             <connections>
-                                <action selector="barButtonTouched:" destination="HAl-Vg-7K1" id="ZEz-0D-QTf"/>
+                                <action selector="doneBarButtonTouched:" destination="HAl-Vg-7K1" id="rfa-lH-85u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -116,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCg-oK-afu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039.2" y="386.35682158920542"/>
+            <point key="canvasLocation" x="2978.4000000000001" y="386.35682158920542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lf6-pL-tSo">
@@ -135,6 +141,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mxa-Yi-C1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="193" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uBF-TC-5Xs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yZF-Ro-myv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x3l-tV-GT9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HAl-Vg-7K1" kind="relationship" relationship="rootViewController" id="l3h-YD-ojW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Xo-ac-XEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039.2" y="386.35682158920542"/>
         </scene>
     </scenes>
 </document>

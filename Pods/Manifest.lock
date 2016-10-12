@@ -1,0 +1,25 @@
+PODS:
+  - HCSStarRatingView (1.4.5)
+  - QuadratTouch (1.1.3)
+
+DEPENDENCIES:
+  - HCSStarRatingView
+  - QuadratTouch (from `https://github.com/Constantine-Fry/das-quadrat.git`, branch `develop`)
+
+EXTERNAL SOURCES:
+  QuadratTouch:
+    :branch: develop
+    :git: https://github.com/Constantine-Fry/das-quadrat.git
+
+CHECKOUT OPTIONS:
+  QuadratTouch:
+    :commit: 4f10166069b9482da15a9b118e81102c3fffd507
+    :git: https://github.com/Constantine-Fry/das-quadrat.git
+
+SPEC CHECKSUMS:
+  HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
+  QuadratTouch: 9e311cbd4f0573b58cafe6783df1fa7ce2458afa
+
+PODFILE CHECKSUM: 543879dd14bd7027fbbb2da04d4cb042ae324759
+
+COCOAPODS: 1.0.1

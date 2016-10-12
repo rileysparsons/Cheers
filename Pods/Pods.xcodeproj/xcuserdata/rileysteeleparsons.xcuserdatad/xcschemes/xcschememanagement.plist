@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HCSStarRatingView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Cheers.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CheersTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CheersUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>QuadratTouch.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4B6BB2C503560080E3358AAE5FC5650F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5DCB8F5124F7718C3157FCC40D942463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70A4D9654916FF596C289A2C6550ADAF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97E5D28D3DA6F0CA23C263B2B5833B9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACC288E69436318760EBCB22A285EF48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
