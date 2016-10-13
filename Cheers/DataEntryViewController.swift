@@ -89,14 +89,14 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
                 coffee.setValue(coffeeThumbnailData, forKey: "thumbnailData")
                 coffee.setValue(coffeeImageData, forKey: "imageData")
             }
-            
+            //#FIXME
             coffee.setValue(selectedCoffeeType, forKey: "type")
             coffee.setValue(Float(coffeeRating), forKey: "rating")
             coffee.setValue(selectedCoffeeTags, forKey: "tastingNotes")
-            coffee.setValue(coffeeLocation?["venue"]!["name"]!, forKeyPath: "locationName")
-            coffee.setValue(coffeeLocation?["venue"]!["id"]!, forKeyPath: "locationId")
-            coffee.setValue(coffeeLocation?["venue"]!["lat"]!, forKeyPath: "locationLat")
-            coffee.setValue(coffeeLocation?["venue"]!["long"]!, forKeyPath: "locationLong")
+            coffee.setValue(coffeeLocation?["name"]!, forKeyPath: "locationName")
+            coffee.setValue(coffeeLocation?["id"]!, forKeyPath: "locationId")
+            coffee.setValue(coffeeLocation?["location"]!["lat"]!, forKeyPath: "locationLat")
+            coffee.setValue(coffeeLocation?["location"]!["lng"]!, forKeyPath: "locationLong")
             coffee.setValue(Date(), forKeyPath: "date")
             
             do {
@@ -147,7 +147,7 @@ class DataEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             case 1:
                 cell = tableView.dequeueReusableCell(withIdentifier: "DisclosureCell", for: indexPath)
                 cell.textLabel?.text = "Coffee Shop"
-                if let coffeeShopName = coffeeLocation?["venue"]!["name"]{
+                if let coffeeShopName = coffeeLocation?["name"]{
                     cell.detailTextLabel?.text = coffeeShopName as? String
                 } else {
                     cell.detailTextLabel?.text = "None"

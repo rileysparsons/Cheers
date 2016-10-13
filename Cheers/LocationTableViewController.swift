@@ -66,15 +66,15 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let venueItems = self.venueItems {
-            return venueItems.count
+        if venueItems != nil {
+            return venueItems!.count
         }
         return 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "venueCell", for: indexPath)
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "venueCell")
         let item = self.venueItems![(indexPath as NSIndexPath).row] as JSONParameters!
         self.configureCellWithItem(cell, item: item!, indexPath: indexPath)
         cell.selectionStyle = .none
@@ -106,19 +106,17 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
     }
  
     func configureCellWithItem(_ cell:UITableViewCell, item: JSONParameters, indexPath: IndexPath) {
-        if let venueInfo = item["venue"] as? JSONParameters {
-            cell.textLabel?.text = venueInfo["name"] as? String
-            if let rating = venueInfo["rating"] as? CGFloat {
-                let number = NSNumber(value: Float(rating) as Float as Float)
-                cell.detailTextLabel?.text = numberFormatter.string(from: number)
+        
+            cell.textLabel?.text = item["name"] as? String
+            if let distanceMeters = item["location"]!["distance"] as? CGFloat {
+                cell.detailTextLabel?.text = stringDistance(fromMeters: distanceMeters)
             }
+        
             if selectedLocation != nil {
-               if selectedLocation?["venue"]?["id"] as! String == venueInfo["id"] as! String{
+               if selectedLocation?["id"] as! String == item["id"] as! String{
                     cell.accessoryType = .checkmark
                     selectedCellIndexPath = indexPath
                 }
-            }
-            
         }
     }
     
@@ -130,7 +128,7 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
         
         let parameters = location.parameters()
         
-        let task = self.session.venues.explore(parameters) {
+        let task = self.session.venues.search(parameters) {
             (result) -> Void in
             if self.venueItems != nil {
                 return
@@ -140,16 +138,7 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
             }
             
             if let response = result.response {
-                if let groups = response["groups"] as? [[String: AnyObject]]  {
-                    var venues = [[String: AnyObject]]()
-                    for group in groups {
-                        if let items = group["items"] as? [[String: AnyObject]] {
-                            venues += items
-                        }
-                    }
-                    
-                    self.venueItems = venues
-                }
+                self.venueItems = response["venues"] as? [JSONParameters]
                 self.tableView.reloadData()
             } else if result.error != nil || !result.isCancelled() {
 //                self.showErrorAlert(result.error)
@@ -186,13 +175,42 @@ class LocationTableViewController: UITableViewController, CLLocationManagerDeleg
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let newLocation = locations.first {
+        if locations.first != nil {
             if self.venueItems == nil {
                 exploreVenues()
             }
 //            self.resultsTableViewController.location = newLocation
             self.locationManager.stopUpdatingLocation()
         }
+    }
+    
+    func stringDistance(fromMeters distanceInMeters:CGFloat) -> String{
+        let useMetricSystem = NSLocale.current.usesMetricSystem
+        var localDistance:CGFloat
+        var localDistanceUnit:String
+        
+        
+        if useMetricSystem {
+            localDistance = distanceInMeters/1000 // Conversion to km
+            localDistanceUnit = "km"
+            if localDistance < 1.0 {
+                localDistance *= 1000
+                localDistance = round(localDistance/100.0)*100.0
+                localDistanceUnit = "m"
+                return String(format: "%f", localDistance) + " " + localDistanceUnit
+            }
+        } else {
+            localDistance = distanceInMeters/1609.34 // Conversion to miles
+            localDistanceUnit = "mi"
+            if localDistance < 0.3 {
+                localDistance *= 5280
+                localDistance = round(localDistance/100.0)*100.0
+                localDistanceUnit = "ft"
+                return String(format: "%.f", localDistance) + " " + localDistanceUnit
+            }
+        }
+        
+        return String(format: "%.1f", localDistance) + " " + localDistanceUnit
     }
 }
 
@@ -204,12 +222,14 @@ extension CLLocation {
         let alt     = "\(self.altitude)"
         let altAcc  = "\(self.verticalAccuracy)"
         let categoryId = "4bf58dd8d48988d1e0931735"
+        let radius = "1000"
         let parameters = [
             Parameter.ll:ll,
             Parameter.llAcc:llAcc,
             Parameter.alt:alt,
             Parameter.altAcc:altAcc,
-            Parameter.categoryId:categoryId
+            Parameter.categoryId:categoryId,
+            Parameter.radius : radius
         ]
         return parameters
     }

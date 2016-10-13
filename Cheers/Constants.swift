@@ -31,5 +31,5 @@ struct coffee {
     ].sorted(by: <)
     
     static let characteristics = ["Smooth (Low Acidity)", "Bright (High Acidity)", "Flat (No Acidity)", "Lemony", "Berry-like", "Citrusy", "Bitter", "Sour", "Acrid", "Chocolatey", "Caramel-like", "Smokey", "Spicy", "Alkaline", "Fruity", "Nutty", "Herbal", "Complex", "Floral", "Bland", "Buttery", "Syrupy", "Tangy"].sorted(by: <)
-                            
+    
 }
